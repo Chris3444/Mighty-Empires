@@ -9,7 +9,37 @@
 			"ppa": true,
 			"version": "latest"
 		}
-	}
+	},
+	// "waitFor": "updateContentCommand",
+    // "updateContentCommand": "pnpm install",
+    // "postAttachCommand": "pnpm dev",
+	"customizations": {
+
+        "vscode": {
+            "extensions": [
+
+                "streetsidesoftware.code-spell-checker",
+
+                "dbaeumer.vscode-eslint",
+
+                "esbenp.prettier-vscode",
+
+                "DavidAnson.vscode-markdownlint",
+
+                "ms-vscode-remote.remote-containers"
+
+            ]
+
+        }
+
+    },
+	"portsAttributes": {
+        "3000": {
+            "label": "Application",
+            "onAutoForward": "openPreview"
+        }
+    },
+    "forwardPorts": [3000]
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},

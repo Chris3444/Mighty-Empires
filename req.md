@@ -17,13 +17,13 @@
   - low hills
   - forest
   - mountains
-  - swanmp
+  - swamp
   - lake
   - river sources
   - river end
   - coast
 
-- tile edges: every edge has a biom
+- tile edges: every edge has a biome
   - mountain -> highland
   - hill -> highland or lowland
   - plain -> lowland

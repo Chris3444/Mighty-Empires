@@ -3,44 +3,30 @@
 {
 	"name": "Node.js & TypeScript",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-18-bullseye",
-	"features": {
-		"ghcr.io/devcontainers/features/git:1": {
-			"ppa": true,
-			"version": "latest"
-		}
-	},
-	// "waitFor": "updateContentCommand",
-    // "updateContentCommand": "pnpm install",
-    // "postAttachCommand": "pnpm dev",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+
+	"postCreateCommand": "npm install",
+	// "updateContentCommand": "npm install",
+
 	"customizations": {
-
-        "vscode": {
+		"vscode": {
             "extensions": [
-
                 "streetsidesoftware.code-spell-checker",
-
                 "dbaeumer.vscode-eslint",
-
                 "esbenp.prettier-vscode",
-
                 "DavidAnson.vscode-markdownlint",
-
                 "ms-vscode-remote.remote-containers"
-
             ]
-
         }
-
-    },
+	},
 	"portsAttributes": {
         "3000": {
             "label": "Application",
             "onAutoForward": "openPreview"
         }
     },
-    "forwardPorts": [3000]
 
+    "forwardPorts": [3000],
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
@@ -48,11 +34,10 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
+
 
 	// Configure tool-specific properties.
-	// "customizations": {},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+	"remoteUser": "root"
 }

@@ -1,5 +1,9 @@
 # Mighty Empires
 
+## This project is under development
+
+to start the porgram run cerate an network 
+
 ```mermaid
 ---
 title: Mighty Empires
@@ -21,7 +25,11 @@ CHARACTER }O--|| TILE: hosts
 CHARACTER {
     string name
     string description
-    int[] stats
+    int diplomacy
+    int martial
+    int stewardship
+    int intrigue
+    int wisdom
     int xp
 }
 

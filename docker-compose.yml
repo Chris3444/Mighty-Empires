@@ -2,7 +2,7 @@ version: '3'
 
 services:
   next-app:
-    container_name: mighty-m-app
+    container_name: mighty-app
     build:
       context: .
       dockerfile: dev.Dockerfile

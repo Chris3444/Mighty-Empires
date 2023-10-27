@@ -1,17 +1,8 @@
-import Image from 'next/image'
-import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <h1>Welcome to Mighty Empires</h1>
-        <p>
-        start to kill nextjsfsada kjhhl
-          </p> 
-      </div>
-      <div><p>translaote</p></div>
-      <p>hello world and strawberrys</p>
-    </main>
+      <body>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, ex deleniti maxime ab aperiam beatae accusamus, culpa illo sed velit debitis vero perspiciatis tempore quia quod pariatur, repudiandae laboriosam ipsum.  </p>
+      </body>
   )
 }

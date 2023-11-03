@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   next-app:
@@ -25,14 +25,17 @@ services:
       - mighty_network
 
   surrealdb:
+    env_file:
+      - .env
     image: surrealdb/surrealdb:latest
     container_name: surrealdb
     restart: always
-    command: start --user max --pass banana file:/data/database.db
+    command: start --user root --pass root file:/data/database.db
     ports:
       - 8000:8000
     volumes:
       - ./data:/data
+      # - ./data:/data
 
 
   # Add more containers below (nginx, postgres, etc.)

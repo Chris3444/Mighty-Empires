@@ -81,6 +81,6 @@ Temporary Items
 # -----------------------------------
 # Specific
 # -----------------------------------
-
+.env
 surreal
 history.txt

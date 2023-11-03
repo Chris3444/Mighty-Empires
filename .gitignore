@@ -72,7 +72,7 @@ Temporary Items
 /target/
 /lib/target/
 .idea/
-.vscode/
+# .vscode/
 /result
 /bin/
 /docker/

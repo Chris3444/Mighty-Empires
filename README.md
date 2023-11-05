@@ -17,13 +17,18 @@ erDiagram
 
 REALM ||--|{ SETTLEMENT : has
 TILE ||--O{ TRANSPORT : hosts 
-TILE ||--o{ DRAGON : hosts
 TILE |O--|| REALM : composes
+TILE ||--|{ BIOME : has
 TILE {
     int x
     int y
+    bool razed
     string terrain
-    string[] biomes
+}
+
+BIOME {
+    string type
+    string speed
 }
 
 CHARACTER }|--|| REALM: belongs
@@ -31,11 +36,16 @@ CHARACTER }O--|| TILE: hosts
 CHARACTER {
     string name
     string description
-    int diplomacy
-    int martial
-    int stewardship
-    int intrigue
-    int wisdom
+    byte diplomacy
+    byte martial
+    byte stewardship
+    byte intrigue
+    byte wisdom
+    byte honor
+    byte agressivity
+    byte independence
+    int treasure
+    int op
     int xp
 }
 
@@ -49,16 +59,26 @@ SETTLEMENT {
     string type
     string name 
     string description
-    int revenue
+    int substence
+    int food
+    int recruitment_cap
+    byte defence
 }
 
+%% TODO add settelment type %%
 
+
+REALM ||--O{ DIPLOMACY: HAS
 REALM ||--|| CHARACTER : has
 REALM ||--|| RACE: hosts
 REALM {
     string race
     string description
-    int treasure
+}
+
+DIPLOMACY ||--|| REALM: has
+DIPLOMACY {
+    string relationship
 }
 
 TRANSPORT{
@@ -67,7 +87,11 @@ TRANSPORT{
     int cost
 }
 
-CHARACTER ||--o{ UNIT: COMMANDS
+CHARACTER ||--o| BANNER: COMMANDS
+BANNER ||--|{ UNIT: has
+BANNER {
+    int food
+}
 
 UNIT {
     string type
@@ -75,8 +99,11 @@ UNIT {
     int xp
 }
 
-DRAGON {
-    string description
+MESSENGER }O--|| REALM: belongs
+MESSENGER O{--|| TILE: positioned
+MESSENGER {
+    string message
 }
+
 
 ```

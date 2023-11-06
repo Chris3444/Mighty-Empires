@@ -2,6 +2,14 @@
 
 ## This project is under development
 
+```mermaid
+graph LR
+    h[Hmome] --> d[Dashboard]
+    h --> v[View] 
+    h --> e[Editor] 
+    h --> m[Kingdom Manager]  
+```
+
 to start the porgram run cerate an network 
 ```docker network create mighty_network```
 

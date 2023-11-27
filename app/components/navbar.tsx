@@ -1,6 +1,4 @@
-"use client";
-
-export function Navbar() {
+export default function Navbar() {
   return (
     <nav>
       <ul>

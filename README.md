@@ -30,6 +30,7 @@ TILE ||--|{ BIOME : has
 TILE {
     int x
     int y
+    int z
     bool razed
     string terrain
 }

@@ -10,23 +10,15 @@
   },
   "dependencies": {
     "@picocss/pico": "^1.5.10",
-    "next": "13.5.6",
+    "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
-    "surrealdb.node": "^0.3.0"
+    "react-hexgrid": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/prop-types": "^15.7.9",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "@types/scheduler": "^0.16.5",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.6",
     "typescript": "^5"
-  },
-  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
-  "main": "next.config.js",
-  "author": "",
-  "license": "ISC"
+  }
 }

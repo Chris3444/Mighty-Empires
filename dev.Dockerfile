@@ -18,6 +18,7 @@ COPY . .
 # ENV NEXT_TELEMETRY_DISABLED 1
 
 # Note: Don't expose ports here, Compose will handle that for us
+RUN yarn next telemetry disable
 
 # Start Next.js in development mode based on the preferred package manager
 CMD \

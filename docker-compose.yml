@@ -16,7 +16,7 @@ services:
     env_file:
       - .env
     volumes:
-      - ./src:/app/src
+      - ./app:/app/app
       - ./public:/app/public
     restart: always
     ports:
@@ -35,7 +35,6 @@ services:
       - 8000:8000
     volumes:
       - ./data:/data
-      # - ./data:/data
 
 
   # Add more containers below (nginx, postgres, etc.)

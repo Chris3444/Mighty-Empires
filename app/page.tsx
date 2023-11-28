@@ -5,7 +5,8 @@ import Map from '@/app/components/map';
 
 export default function Home() {
   return (
-    <><Map /></>
+    <>
+      <Map />
+    </>
   );
-  
 }
